@@ -68,6 +68,7 @@ struct Chapter1 {
     }
 }
 
+// TODO: n使い忘れてたので直す(´・︵・｀)
 fileprivate extension Chapter1 {
     fileprivate static func ngramWord(_ input: String, n: Int) -> [(String, String)] {
         let words = input.components(separatedBy: " ") + [""]
