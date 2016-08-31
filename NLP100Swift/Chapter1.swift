@@ -60,7 +60,7 @@ struct Chapter1 {
      
      与えられたシーケンス（文字列やリストなど）からn-gramを作る関数を作成せよ．この関数を用い，"I am an NLPer"という文から単語bi-gram，文字bi-gramを得よ．
     */
-    static func q5Word(_ input: String) -> [(String, String)] {
+    static func q5Word(_ input: String) -> [[String]] {
         return ngramWord(input, n: 2)
     }
     static func q5Char(_ input: String) -> [String] {
@@ -68,14 +68,19 @@ struct Chapter1 {
     }
 }
 
-// TODO: n使い忘れてたので直す(´・︵・｀)
 fileprivate extension Chapter1 {
-    fileprivate static func ngramWord(_ input: String, n: Int) -> [(String, String)] {
-        let words = input.components(separatedBy: " ") + [""]
-        return words.reduce([(String, String)]()) { sum, word in
+    fileprivate static func ngramWord(_ input: String, n: Int) -> [[String]] {
+        let words = input.components(separatedBy: " ") + (0..<n-1).map { _ in "" }
+        return words.reduce([[String]]()) { sum, word in
             var sum = sum
-            let first: String = sum.last?.1 ?? ""
-            sum.append((first, word))
+            var words: [String] = { () -> [String] in
+                if let lasts = sum.last?.dropFirst() {
+                    return Array(lasts)
+                }
+                return []
+            }()
+            words = (0..<(n - 1 - words.count)).map { _ in "" } + words
+            sum.append(words + [word])
             return sum
         }
     }
@@ -83,7 +88,7 @@ fileprivate extension Chapter1 {
         return input.characters.reduce([String]()) { sum, char in
             var sum = sum
             let count = sum.last?.characters.count ?? 0
-            let first = sum.last?[count-1..<count] ?? " "
+            let first = sum.last?[count - (n - 1)..<count] ?? " "
             sum.append(first + String(char))
             return sum
             }.filter { !$0.contains(" ") }

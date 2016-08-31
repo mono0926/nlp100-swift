@@ -29,11 +29,12 @@ class NLP100SwiftTests: XCTestCase {
     }
     func testQ5Word() {
         let result = Chapter1.q5Word("I am an NLPer")
-        let expected = [("", "I"), ("I", "am"), ("am", "an"), ("an", "NLPer"), ("NLPer", "")]
+        print(result)
+        let expected = [["", "I"], ["I", "am"], ["am", "an"], ["an", "NLPer"], ["NLPer", ""]]
         XCTAssertEqual(result.count, expected.count)
         result.enumerated().forEach {
-            XCTAssertEqual($1.0, expected[$0].0)
-            XCTAssertEqual($1.1, expected[$0].1)
+            XCTAssertEqual($1[0], expected[$0][0])
+            XCTAssertEqual($1[1], expected[$0][1])
         }
     }
     func testQ6Word() {
