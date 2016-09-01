@@ -9,7 +9,7 @@
 import XCTest
 @testable import NLP100Swift
 
-class NLP100SwiftTests: XCTestCase {
+class Chapter1Tests: XCTestCase {
     func testQ0() {
         XCTAssertEqual(Chapter1.q0("stressed"), "desserts")
     }

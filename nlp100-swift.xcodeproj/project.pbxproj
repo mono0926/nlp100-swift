@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE8D5F2E1D78138A006DF186 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8D5F2D1D78138A006DF186 /* Chapter2.swift */; };
+		FE8D5F301D78139B006DF186 /* Chapter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */; };
 		FED26D7B1D76F37900FF0DEA /* NLP100Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED26D721D76F37800FF0DEA /* NLP100Swift.framework */; };
 		FED26D801D76F37900FF0DEA /* Chapter1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D7F1D76F37900FF0DEA /* Chapter1Tests.swift */; };
 		FED26D821D76F37900FF0DEA /* NLP100Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = FED26D741D76F37900FF0DEA /* NLP100Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE8D5F2D1D78138A006DF186 /* Chapter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
+		FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter2Tests.swift; sourceTree = "<group>"; };
 		FED26D721D76F37800FF0DEA /* NLP100Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NLP100Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED26D741D76F37900FF0DEA /* NLP100Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLP100Swift.h; sourceTree = "<group>"; };
 		FED26D751D76F37900FF0DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 				FED26D751D76F37900FF0DEA /* Info.plist */,
 				FED26D891D76F38D00FF0DEA /* Chapter1.swift */,
 				FED26D8B1D76FAD700FF0DEA /* Extensions.swift */,
+				FE8D5F2D1D78138A006DF186 /* Chapter2.swift */,
 			);
 			path = NLP100Swift;
 			sourceTree = "<group>";
@@ -89,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FED26D7F1D76F37900FF0DEA /* Chapter1Tests.swift */,
+				FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */,
 				FED26D8D1D76FE1800FF0DEA /* ExtensionsTests.swift */,
 				FED26D811D76F37900FF0DEA /* Info.plist */,
 			);
@@ -207,6 +213,7 @@
 			files = (
 				FED26D8C1D76FAD700FF0DEA /* Extensions.swift in Sources */,
 				FED26D8A1D76F38D00FF0DEA /* Chapter1.swift in Sources */,
+				FE8D5F2E1D78138A006DF186 /* Chapter2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE8D5F301D78139B006DF186 /* Chapter2Tests.swift in Sources */,
 				FED26D8E1D76FE1800FF0DEA /* ExtensionsTests.swift in Sources */,
 				FED26D801D76F37900FF0DEA /* Chapter1Tests.swift in Sources */,
 			);
