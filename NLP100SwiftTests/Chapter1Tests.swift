@@ -20,7 +20,7 @@ class NLP100SwiftTests: XCTestCase {
         XCTAssertEqual(Chapter1.q2("パトカー", "タクシー"), "パタトクカシーー")
     }
     func testQ3() {
-        XCTAssertEqual(Chapter1.q3("Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."), [3, 1, 4, 1, 6, 9, 2, 7, 5, 3, 5, 8, 9, 7, 10])
+        XCTAssertEqual(Chapter1.q3("Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."), [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9])
     }
     func testQ4() {
         XCTAssertEqual(
