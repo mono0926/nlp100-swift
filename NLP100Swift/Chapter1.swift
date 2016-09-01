@@ -23,7 +23,9 @@ struct Chapter1 {
      「パタトクカシーー」という文字列の1,3,5,7文字目を取り出して連結した文字列を得よ．
     */
     static func q1(_ input: String) -> String {
-        return String(input.characters.enumerated().filter { i, _ in i % 2 == 1 }.map { $1 })
+        return String(input.characters.enumerated()
+            .filter { i, _ in i % 2 == 1 }
+            .map { $1 })
     }
     /**
     # 02. 「パトカー」＋「タクシー」＝「パタトクカシーー」
@@ -31,7 +33,9 @@ struct Chapter1 {
     「パトカー」＋「タクシー」の文字を先頭から交互に連結して文字列「パタトクカシーー」を得よ．
     */
     static func q2(_ input1: String, _ input2: String) -> String {
-        return zip(input1.characters, input2.characters).map { String($0) + String($1) }.reduce("") { sum, e in sum + e }
+        return zip(input1.characters, input2.characters)
+            .map { String($0) + String($1) }
+            .reduce("") { sum, e in sum + e }
     }
     /**
     # 03. 円周率
@@ -39,7 +43,8 @@ struct Chapter1 {
     "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics."という文を単語に分解し，各単語の（アルファベットの）文字数を先頭から出現順に並べたリストを作成せよ．
     */
     static func q3(_ input: String) -> [Int] {
-        return input.components(separatedBy: " ").map { $0.trimmingCharacters(in: CharacterSet(charactersIn: ",.")).characters.count }
+        return input.components(separatedBy: " ")
+            .map { $0.trimmingCharacters(in: CharacterSet(charactersIn: ",.")).characters.count }
     }
     /**
     # 04. 元素記号
@@ -148,13 +153,15 @@ fileprivate extension Chapter1 {
             let first = sum.last?[count - (n - 1)..<count] ?? " "
             sum.append(first + String(char))
             return sum
-            }.filter { !$0.contains(" ") }
+            }
+            .filter { !$0.contains(" ") }
     }
     fileprivate static func cipher(_ input: String) -> String {
         return input.characters.map { c in
             let s = String(c)
             let lowercased = s.lowercased()
             return lowercased == s ? String(Character(asciiCode: (219 - c.asciiCode()))!) : s
-            }.joined(separator: "")
+            }
+            .joined(separator: "")
     }
 }
