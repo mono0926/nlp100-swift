@@ -124,13 +124,6 @@ struct Chapter1 {
     }
 }
 
-struct SetResults {
-    let sum: Set<String>
-    let diff1: Set<String>
-    let diff2: Set<String>
-    let product: Set<String>
-}
-
 fileprivate extension Chapter1 {
     // TODO: ちょっと汚い(　´･‿･｀)
     fileprivate static func ngramWord(_ input: String, n: Int) -> [[String]] {
