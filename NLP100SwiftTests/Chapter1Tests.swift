@@ -37,9 +37,40 @@ class NLP100SwiftTests: XCTestCase {
             XCTAssertEqual($1[1], expected[$0][1])
         }
     }
-    func testQ6Word() {
+    func testQ5Char() {
         let result = Chapter1.q5Char("I am an NLPer")
         let expected = ["am", "an", "NL", "LP", "Pe", "er"]
         XCTAssertEqual(result, expected)
+    }
+    func testQ6() {
+        let input1 = "paraparaparadise"
+        let input2 = "paragraph"
+        let result = Chapter1.q6(input1, input2)
+        XCTAssertEqual(result.sum, Set(["pa", "se", "ad", "ap", "ra", "gr", "ag", "ph", "ar", "di", "is"]))
+        XCTAssertEqual(result.diff1, Set(["se", "ad", "di", "is"]))
+        XCTAssertEqual(result.diff2, Set(["gr", "ag", "ph"]))
+        XCTAssertEqual(result.product, Set(["pa", "ar", "ap", "ra"]))
+        let word = "se"
+        XCTAssertTrue(Chapter1.q6IsContainAsBiGram(sentence: input1, word: word))
+        XCTAssertFalse(Chapter1.q6IsContainAsBiGram(sentence: input2, word: word))
+    }
+    func testQ7() {
+        XCTAssertEqual(Chapter1.q7(x: 12, y: "気温" as AnyObject, z: 22.4 as AnyObject), "12時の気温は22.4")
+    }
+    func testQ8() {
+        XCTAssertEqual(Chapter1.q8("Masayuki Ono"), "Mzhzbfpr»Oml")
+        XCTAssertEqual(Chapter1.q8("Mzhzbfpr»Oml"), "Masayuki Ono")
+    }
+    func testQ9() {
+        let inputLong = "I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
+        let resultLong = Chapter1.q9(inputLong)
+        print("Q9. resultLong: \(resultLong)")
+        XCTAssertNotEqual(resultLong, inputLong)
+        XCTAssertTrue(resultLong.hasPrefix("I "))
+        XCTAssertTrue(resultLong.hasSuffix(" ."))
+        let inputShort = "I couldn't believe ."
+        let resultShort = Chapter1.q9(inputShort)
+        XCTAssertEqual(resultShort, inputShort)
+        
     }
 }

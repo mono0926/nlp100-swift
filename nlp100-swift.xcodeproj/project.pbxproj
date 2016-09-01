@@ -11,8 +11,8 @@
 		FED26D801D76F37900FF0DEA /* Chapter1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D7F1D76F37900FF0DEA /* Chapter1Tests.swift */; };
 		FED26D821D76F37900FF0DEA /* NLP100Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = FED26D741D76F37900FF0DEA /* NLP100Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FED26D8A1D76F38D00FF0DEA /* Chapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D891D76F38D00FF0DEA /* Chapter1.swift */; };
-		FED26D8C1D76FAD700FF0DEA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D8B1D76FAD700FF0DEA /* StringExtensions.swift */; };
-		FED26D8E1D76FE1800FF0DEA /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D8D1D76FE1800FF0DEA /* StringExtensionsTests.swift */; };
+		FED26D8C1D76FAD700FF0DEA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D8B1D76FAD700FF0DEA /* Extensions.swift */; };
+		FED26D8E1D76FE1800FF0DEA /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D8D1D76FE1800FF0DEA /* ExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +33,8 @@
 		FED26D7F1D76F37900FF0DEA /* Chapter1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1Tests.swift; sourceTree = "<group>"; };
 		FED26D811D76F37900FF0DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED26D891D76F38D00FF0DEA /* Chapter1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; };
-		FED26D8B1D76FAD700FF0DEA /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		FED26D8D1D76FE1800FF0DEA /* StringExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
+		FED26D8B1D76FAD700FF0DEA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FED26D8D1D76FE1800FF0DEA /* ExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				FED26D741D76F37900FF0DEA /* NLP100Swift.h */,
 				FED26D751D76F37900FF0DEA /* Info.plist */,
 				FED26D891D76F38D00FF0DEA /* Chapter1.swift */,
-				FED26D8B1D76FAD700FF0DEA /* StringExtensions.swift */,
+				FED26D8B1D76FAD700FF0DEA /* Extensions.swift */,
 			);
 			path = NLP100Swift;
 			sourceTree = "<group>";
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				FED26D7F1D76F37900FF0DEA /* Chapter1Tests.swift */,
-				FED26D8D1D76FE1800FF0DEA /* StringExtensionsTests.swift */,
+				FED26D8D1D76FE1800FF0DEA /* ExtensionsTests.swift */,
 				FED26D811D76F37900FF0DEA /* Info.plist */,
 			);
 			path = NLP100SwiftTests;
@@ -205,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FED26D8C1D76FAD700FF0DEA /* StringExtensions.swift in Sources */,
+				FED26D8C1D76FAD700FF0DEA /* Extensions.swift in Sources */,
 				FED26D8A1D76F38D00FF0DEA /* Chapter1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FED26D8E1D76FE1800FF0DEA /* StringExtensionsTests.swift in Sources */,
+				FED26D8E1D76FE1800FF0DEA /* ExtensionsTests.swift in Sources */,
 				FED26D801D76F37900FF0DEA /* Chapter1Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +487,7 @@
 				FED26D851D76F37900FF0DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FED26D861D76F37900FF0DEA /* Build configuration list for PBXNativeTarget "NLP100SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +496,7 @@
 				FED26D881D76F37900FF0DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

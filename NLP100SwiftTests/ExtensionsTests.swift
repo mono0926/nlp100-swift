@@ -8,7 +8,7 @@
 import XCTest
 @testable import NLP100Swift
 
-class StringExtensionsTests: XCTestCase {
+class ExtensionsTests: XCTestCase {
     func testSuscript() {
         XCTAssertEqual("foo"[0..<0], "")
         XCTAssertEqual("foo"[0..<1], "f")
@@ -19,5 +19,14 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertEqual("foo"[1..<2], "o")
         XCTAssertEqual("foo"[1..<3], "oo")
         XCTAssertEqual("foo"[1..<4], nil)
+    }
+    
+    func testToAsciiCode() {
+        XCTAssertEqual("A".asciiCode(), 65)
+        XCTAssertEqual("a".asciiCode(), 97)
+    }
+    func testFromAsciiCode() {
+        XCTAssertEqual(Character(asciiCode: 65), "A")
+        XCTAssertEqual(Character(asciiCode: 97), "a")
     }
 }
