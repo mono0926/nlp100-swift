@@ -35,7 +35,7 @@ struct Chapter1 {
     static func q2(_ input1: String, _ input2: String) -> String {
         return zip(input1.characters, input2.characters)
             .map { String($0) + String($1) }
-            .reduce("") { sum, e in sum + e }
+            .reduce("", +)
     }
     /**
     # 03. 円周率
