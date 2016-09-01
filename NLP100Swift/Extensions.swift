@@ -45,7 +45,6 @@ extension Collection {
     func shuffle() -> [Generator.Element] {
         var list = Array(self)
         list.shuffled()
-        print(list)
         return list
     }
 }
