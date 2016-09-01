@@ -119,7 +119,8 @@ struct Chapter1 {
         guard words.count > 4 else { return input }
         let first = words.removeFirst()
         let last = words.removeLast()
-        return ([first] + words.shuffle() + [last]).joined(separator: separator)
+        words.shuffle()
+        return ([first] + words + [last]).joined(separator: separator)
     }
 }
 

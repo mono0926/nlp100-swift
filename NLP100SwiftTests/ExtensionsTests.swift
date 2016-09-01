@@ -29,4 +29,9 @@ class ExtensionsTests: XCTestCase {
         XCTAssertEqual(Character(asciiCode: 65), "A")
         XCTAssertEqual(Character(asciiCode: 97), "a")
     }
+    // TODO: ランダムなので、たまに失敗するのが課題🤔
+    func testShuffle() {
+        let input = ["a", "b", "c", "d", "e"]
+        XCTAssertNotEqual(input.shuffled(), input)
+    }
 }

@@ -42,15 +42,15 @@ extension Character
 }
 
 extension Collection {
-    func shuffle() -> [Generator.Element] {
+    func shuffled() -> [Generator.Element] {
         var list = Array(self)
-        list.shuffled()
+        list.shuffle()
         return list
     }
 }
 
 extension MutableCollection where Index == Int {
-    mutating func shuffled() {
+    mutating func shuffle() {
         let c = Int(count.toIntMax())
         guard c > 1 else { return }
         
