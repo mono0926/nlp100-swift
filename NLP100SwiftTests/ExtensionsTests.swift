@@ -32,6 +32,8 @@ class ExtensionsTests: XCTestCase {
     // TODO: ランダムなので、たまに失敗するのが課題🤔
     func testShuffle() {
         let input = ["a", "b", "c", "d", "e"]
-        XCTAssertNotEqual(input.shuffled(), input)
+        let result = input.shuffled()
+        XCTAssertNotEqual(result, input)
+        XCTAssertEqual(Set(result), Set(input))
     }
 }
