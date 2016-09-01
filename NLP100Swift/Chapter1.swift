@@ -69,6 +69,7 @@ struct Chapter1 {
 }
 
 fileprivate extension Chapter1 {
+    // TODO: ちょっと汚い(　´･‿･｀)
     fileprivate static func ngramWord(_ input: String, n: Int) -> [[String]] {
         let words = input.components(separatedBy: " ") + (0..<n-1).map { _ in "" }
         return words.reduce([[String]]()) { sum, word in
