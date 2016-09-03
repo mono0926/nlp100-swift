@@ -27,17 +27,26 @@ extension String {
 
 extension Character
 {
+    init?(asciiCode: UInt32) {
+        guard let scalar = UnicodeScalar(asciiCode) else {
+            return nil
+        }
+        self = Character(scalar)
+    }
     func asciiCode() -> UInt32 {
         let characterString = String(self)
         let scalars = characterString.unicodeScalars
         
         return scalars[scalars.startIndex].value
     }
-    init?(asciiCode: UInt32) {
-        guard let scalar = UnicodeScalar(asciiCode) else {
-            return nil
-        }        
-        self = Character(scalar)
+}
+
+extension CharacterSet {
+    func isContain(_ character: Character) -> Bool {
+        return isContain(String(character))
+    }
+    func isContain(_ string: String) -> Bool {
+        return string.rangeOfCharacter(from: self) != nil
     }
 }
 

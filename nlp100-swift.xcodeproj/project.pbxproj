@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		FE8D5F2E1D78138A006DF186 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8D5F2D1D78138A006DF186 /* Chapter2.swift */; };
 		FE8D5F301D78139B006DF186 /* Chapter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */; };
+		FEB07E671D7AA2FB00040B90 /* hightemp.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E661D7AA2FB00040B90 /* hightemp.txt */; };
+		FEB07E6B1D7AA3C400040B90 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB07E6A1D7AA3C400040B90 /* TestUtil.swift */; };
+		FEB07E6D1D7AF43C00040B90 /* hightemp_tab2space.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E6C1D7AF43C00040B90 /* hightemp_tab2space.txt */; };
+		FEB07E701D7AFDED00040B90 /* hightemp_c1.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E6E1D7AFDED00040B90 /* hightemp_c1.txt */; };
+		FEB07E711D7AFDED00040B90 /* hightemp_c2.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E6F1D7AFDED00040B90 /* hightemp_c2.txt */; };
+		FEB07E731D7B021100040B90 /* hightemp_c1+2.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E721D7B021100040B90 /* hightemp_c1+2.txt */; };
+		FEB07E751D7B076800040B90 /* hightemp_headn3.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E741D7B076800040B90 /* hightemp_headn3.txt */; };
+		FEB07E771D7B0BC800040B90 /* hightemp_tailn3.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E761D7B0BC800040B90 /* hightemp_tailn3.txt */; };
 		FED26D7B1D76F37900FF0DEA /* NLP100Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED26D721D76F37800FF0DEA /* NLP100Swift.framework */; };
 		FED26D801D76F37900FF0DEA /* Chapter1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D7F1D76F37900FF0DEA /* Chapter1Tests.swift */; };
 		FED26D821D76F37900FF0DEA /* NLP100Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = FED26D741D76F37900FF0DEA /* NLP100Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,6 +38,14 @@
 /* Begin PBXFileReference section */
 		FE8D5F2D1D78138A006DF186 /* Chapter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter2Tests.swift; sourceTree = "<group>"; };
+		FEB07E661D7AA2FB00040B90 /* hightemp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp.txt; sourceTree = "<group>"; };
+		FEB07E6A1D7AA3C400040B90 /* TestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
+		FEB07E6C1D7AF43C00040B90 /* hightemp_tab2space.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_tab2space.txt; sourceTree = "<group>"; };
+		FEB07E6E1D7AFDED00040B90 /* hightemp_c1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_c1.txt; sourceTree = "<group>"; };
+		FEB07E6F1D7AFDED00040B90 /* hightemp_c2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_c2.txt; sourceTree = "<group>"; };
+		FEB07E721D7B021100040B90 /* hightemp_c1+2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "hightemp_c1+2.txt"; sourceTree = "<group>"; };
+		FEB07E741D7B076800040B90 /* hightemp_headn3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_headn3.txt; sourceTree = "<group>"; };
+		FEB07E761D7B0BC800040B90 /* hightemp_tailn3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_tailn3.txt; sourceTree = "<group>"; };
 		FED26D721D76F37800FF0DEA /* NLP100Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NLP100Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED26D741D76F37900FF0DEA /* NLP100Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLP100Swift.h; sourceTree = "<group>"; };
 		FED26D751D76F37900FF0DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +76,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FEB07E651D7AA2D300040B90 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEB07E661D7AA2FB00040B90 /* hightemp.txt */,
+				FEB07E6C1D7AF43C00040B90 /* hightemp_tab2space.txt */,
+				FEB07E6E1D7AFDED00040B90 /* hightemp_c1.txt */,
+				FEB07E6F1D7AFDED00040B90 /* hightemp_c2.txt */,
+				FEB07E721D7B021100040B90 /* hightemp_c1+2.txt */,
+				FEB07E741D7B076800040B90 /* hightemp_headn3.txt */,
+				FEB07E761D7B0BC800040B90 /* hightemp_tailn3.txt */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		FED26D471D76F2BB00FF0DEA = {
 			isa = PBXGroup;
 			children = (
@@ -93,10 +123,12 @@
 		FED26D7E1D76F37900FF0DEA /* NLP100SwiftTests */ = {
 			isa = PBXGroup;
 			children = (
+				FEB07E651D7AA2D300040B90 /* Resources */,
 				FED26D7F1D76F37900FF0DEA /* Chapter1Tests.swift */,
 				FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */,
 				FED26D8D1D76FE1800FF0DEA /* ExtensionsTests.swift */,
 				FED26D811D76F37900FF0DEA /* Info.plist */,
+				FEB07E6A1D7AA3C400040B90 /* TestUtil.swift */,
 			);
 			path = NLP100SwiftTests;
 			sourceTree = "<group>";
@@ -201,6 +233,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEB07E6D1D7AF43C00040B90 /* hightemp_tab2space.txt in Resources */,
+				FEB07E751D7B076800040B90 /* hightemp_headn3.txt in Resources */,
+				FEB07E731D7B021100040B90 /* hightemp_c1+2.txt in Resources */,
+				FEB07E771D7B0BC800040B90 /* hightemp_tailn3.txt in Resources */,
+				FEB07E671D7AA2FB00040B90 /* hightemp.txt in Resources */,
+				FEB07E701D7AFDED00040B90 /* hightemp_c1.txt in Resources */,
+				FEB07E711D7AFDED00040B90 /* hightemp_c2.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +263,7 @@
 				FE8D5F301D78139B006DF186 /* Chapter2Tests.swift in Sources */,
 				FED26D8E1D76FE1800FF0DEA /* ExtensionsTests.swift in Sources */,
 				FED26D801D76F37900FF0DEA /* Chapter1Tests.swift in Sources */,
+				FEB07E6B1D7AA3C400040B90 /* TestUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
