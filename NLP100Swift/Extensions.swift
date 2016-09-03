@@ -23,6 +23,9 @@ extension String {
         guard characters.count == 1 else { return nil }
         return characters.first!.asciiCode()
     }
+    func contains(_ characterSet: CharacterSet) -> Bool {
+        return rangeOfCharacter(from: characterSet) != nil
+    }
 }
 
 extension Character
@@ -42,11 +45,8 @@ extension Character
 }
 
 extension CharacterSet {
-    func isContain(_ character: Character) -> Bool {
-        return isContain(String(character))
-    }
-    func isContain(_ string: String) -> Bool {
-        return string.rangeOfCharacter(from: self) != nil
+    func contains(_ character: Character) -> Bool {
+        return String(character).contains(self)
     }
 }
 
