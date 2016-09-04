@@ -10,8 +10,8 @@ import Foundation
 
 class TestUtil {
     private static let bundle = Bundle(for: TestUtil.self)
-    static func read(fromFile name: String) -> String {
-        let path = bundle.path(forResource: name, ofType: "txt")!
+    static func read(fromFile name: String, type: String? = "txt") -> String {
+        let path = bundle.path(forResource: name, ofType: type)!
         return try! String(contentsOfFile: path)
     }
 }

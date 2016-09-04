@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		FE8D5F2E1D78138A006DF186 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8D5F2D1D78138A006DF186 /* Chapter2.swift */; };
 		FE8D5F301D78139B006DF186 /* Chapter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */; };
+		FE96F88F1D7BB20900834C97 /* xaa in Resources */ = {isa = PBXBuildFile; fileRef = FE96F88C1D7BB20900834C97 /* xaa */; };
+		FE96F8901D7BB20900834C97 /* xab in Resources */ = {isa = PBXBuildFile; fileRef = FE96F88D1D7BB20900834C97 /* xab */; };
+		FE96F8911D7BB20900834C97 /* xac in Resources */ = {isa = PBXBuildFile; fileRef = FE96F88E1D7BB20900834C97 /* xac */; };
+		FE96F8931D7BB99F00834C97 /* hightemp_c1sortuniq.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE96F8921D7BB99F00834C97 /* hightemp_c1sortuniq.txt */; };
+		FE96F8951D7BBBD500834C97 /* hightemp_sortk3r.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE96F8941D7BBBD500834C97 /* hightemp_sortk3r.txt */; };
+		FE96F8971D7BC23C00834C97 /* hightemp_sortf1count.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE96F8961D7BC23C00834C97 /* hightemp_sortf1count.txt */; };
 		FEB07E671D7AA2FB00040B90 /* hightemp.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E661D7AA2FB00040B90 /* hightemp.txt */; };
 		FEB07E6B1D7AA3C400040B90 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB07E6A1D7AA3C400040B90 /* TestUtil.swift */; };
 		FEB07E6D1D7AF43C00040B90 /* hightemp_tab2space.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E6C1D7AF43C00040B90 /* hightemp_tab2space.txt */; };
@@ -38,6 +44,12 @@
 /* Begin PBXFileReference section */
 		FE8D5F2D1D78138A006DF186 /* Chapter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter2Tests.swift; sourceTree = "<group>"; };
+		FE96F88C1D7BB20900834C97 /* xaa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xaa; sourceTree = "<group>"; };
+		FE96F88D1D7BB20900834C97 /* xab */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xab; sourceTree = "<group>"; };
+		FE96F88E1D7BB20900834C97 /* xac */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xac; sourceTree = "<group>"; };
+		FE96F8921D7BB99F00834C97 /* hightemp_c1sortuniq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_c1sortuniq.txt; sourceTree = "<group>"; };
+		FE96F8941D7BBBD500834C97 /* hightemp_sortk3r.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_sortk3r.txt; sourceTree = "<group>"; };
+		FE96F8961D7BC23C00834C97 /* hightemp_sortf1count.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_sortf1count.txt; sourceTree = "<group>"; };
 		FEB07E661D7AA2FB00040B90 /* hightemp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp.txt; sourceTree = "<group>"; };
 		FEB07E6A1D7AA3C400040B90 /* TestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		FEB07E6C1D7AF43C00040B90 /* hightemp_tab2space.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_tab2space.txt; sourceTree = "<group>"; };
@@ -86,6 +98,12 @@
 				FEB07E721D7B021100040B90 /* hightemp_c1+2.txt */,
 				FEB07E741D7B076800040B90 /* hightemp_headn3.txt */,
 				FEB07E761D7B0BC800040B90 /* hightemp_tailn3.txt */,
+				FE96F88C1D7BB20900834C97 /* xaa */,
+				FE96F88D1D7BB20900834C97 /* xab */,
+				FE96F88E1D7BB20900834C97 /* xac */,
+				FE96F8921D7BB99F00834C97 /* hightemp_c1sortuniq.txt */,
+				FE96F8941D7BBBD500834C97 /* hightemp_sortk3r.txt */,
+				FE96F8961D7BC23C00834C97 /* hightemp_sortf1count.txt */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -233,13 +251,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE96F8901D7BB20900834C97 /* xab in Resources */,
 				FEB07E6D1D7AF43C00040B90 /* hightemp_tab2space.txt in Resources */,
 				FEB07E751D7B076800040B90 /* hightemp_headn3.txt in Resources */,
+				FE96F8951D7BBBD500834C97 /* hightemp_sortk3r.txt in Resources */,
+				FE96F8911D7BB20900834C97 /* xac in Resources */,
 				FEB07E731D7B021100040B90 /* hightemp_c1+2.txt in Resources */,
+				FE96F8931D7BB99F00834C97 /* hightemp_c1sortuniq.txt in Resources */,
 				FEB07E771D7B0BC800040B90 /* hightemp_tailn3.txt in Resources */,
 				FEB07E671D7AA2FB00040B90 /* hightemp.txt in Resources */,
+				FE96F88F1D7BB20900834C97 /* xaa in Resources */,
 				FEB07E701D7AFDED00040B90 /* hightemp_c1.txt in Resources */,
 				FEB07E711D7AFDED00040B90 /* hightemp_c2.txt in Resources */,
+				FE96F8971D7BC23C00834C97 /* hightemp_sortf1count.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

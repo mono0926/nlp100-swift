@@ -58,4 +58,48 @@ struct Chapter2 {
         }
         return input
     }
+    static func split(_ input: String, l: Int) -> [String] {
+        var numberOfLines = countNumberOfLines(input)
+        var result = [String]()
+        var input = input
+        while numberOfLines > 0 {
+            let block = head(input, n: l)
+            numberOfLines -= l
+            input = tail(input, n: numberOfLines)
+            result.append(block)
+        }
+        return result
+    }
+    static func getUniqueValue(_ input: String, columnIndex: Int, separator: String) -> Set<String> {
+        let values = getCol(from: input, columnIndex: columnIndex, separator: separator).filter { !$0.isEmpty }
+        return Set(values)
+    }
+    static func getSortedLines(_ input: String, keyColumnIndex: Int, separator: String) -> [String] {
+        return input.components(separatedBy: CharacterSet.newlines).filter { !$0.isEmpty }.enumerated().map { (value: $1, key: $1.components(separatedBy: separator)[keyColumnIndex], index: $0) }
+            .sorted { x, y in
+                if x.key == y.key {
+                    return x.index < y.index
+                }
+                return x.key >= y.key
+        }
+            .map { $0.value }
+    }
+    static func getUniqValuesSortedByCount(_ input: String, keyColumnIndex: Int, separator: String) -> [Set<String>] {
+        let values = getCol(from: input, columnIndex: keyColumnIndex, separator: separator).filter { !$0.isEmpty }
+        let dict = toCountDictionary(values)
+        return dict.reduce([Int: [String]]()) { sum, v in
+            var sum = sum
+            sum[v.value] = (sum[v.value] ?? []) + [v.key]
+            return sum
+        }
+            .sorted { x, y in x.key > y.key }
+            .map { Set($1) }
+    }
+    static func toCountDictionary(_ input: [String]) -> [String: Int] {
+        return input.reduce([String: Int]()) { sum, v in
+            var sum = sum
+            sum[v] = (sum[v] ?? 0) + 1
+            return sum
+        }
+    }
 }
