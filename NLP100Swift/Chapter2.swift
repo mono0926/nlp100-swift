@@ -12,7 +12,7 @@ struct Chapter2 {
     /** Linuxのwcコマンドでカウントした行数と同じ結果を返す */
     static func countNumberOfLines(_ input: String) -> Int {
         // NOTE: Linuxのwcコマンドは、改行数をカウントするので、それに合わせた。(改行で分割して要素数をcountすると、最終行が空行などの時にズレる)
-        return input.characters.filter { CharacterSet.newlines.contains($0) }.count
+        return input.characters.filter { String($0).rangeOfCharacter(from: CharacterSet.newlines) != nil }.count
     }
     
     static func getCol(from input: String, columnIndex: Int, separator: String) -> [String] {
@@ -37,9 +37,9 @@ struct Chapter2 {
         var newLinesCount = 0
         for (i, c) in input.characters.enumerated() {
             if newLinesCount == n {
-                return input[0..<i]!
+                return input[sequentialAccess: 0..<i]!
             }
-            if CharacterSet.newlines.contains(c)  {
+            if String(c).rangeOfCharacter(from: CharacterSet.newlines) != nil  {
                 newLinesCount += 1
             }
         }
@@ -50,9 +50,9 @@ struct Chapter2 {
         var newLinesCount = 0
         for (i, c) in input.characters.enumerated() {
             if newLinesCount == nHead {
-                return input[i..<input.characters.count]!
+                return input[sequentialAccess: i..<input.characters.count]!
             }
-            if CharacterSet.newlines.contains(c) {
+            if String(c).rangeOfCharacter(from: CharacterSet.newlines) != nil {
                 newLinesCount += 1
             }
         }

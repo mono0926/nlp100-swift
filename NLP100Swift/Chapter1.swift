@@ -53,7 +53,7 @@ struct Chapter1 {
     */
     static func q4(_ input: String, condition: [Int]) -> [String: Int] {
         return input.components(separatedBy: " ").enumerated()
-            .map { (i, v) in condition.contains(i + 1) ? (i, v[0..<1]!) : (i, v[0..<2]!) }
+            .map { (i, v) in condition.contains(i + 1) ? (i, v[sequentialAccess: 0..<1]!) : (i, v[sequentialAccess: 0..<2]!) }
             .reduce([String: Int]()) { sum, v in
                 var sum = sum
                 sum[v.1] = v.0 + 1
@@ -150,17 +150,17 @@ fileprivate extension Chapter1 {
         return input.characters.reduce([String]()) { sum, char in
             var sum = sum
             let count = sum.last?.characters.count ?? 0
-            let first = sum.last?[count - (n - 1)..<count] ?? " "
+            let first = sum.last?[sequentialAccess: count - (n - 1)..<count] ?? " "
             sum.append(first + String(char))
             return sum
             }
             .filter { !$0.contains(" ") }
     }
     fileprivate static func cipher(_ input: String) -> String {
-        return input.characters.map { c in
+        return input.characters.map { c -> String in
             let s = String(c)
             let lowercased = s.lowercased()
-            return lowercased == s ? String(Character(asciiCode: (219 - c.asciiCode()))!) : s
+            return lowercased == s ? String(describing: UnicodeScalar(219 - s.unicodeScalars.first!.value)!) : s
             }
             .joined(separator: "")
     }

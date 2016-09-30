@@ -8,45 +8,76 @@
 
 import Foundation
 
+
+extension String: BidirectionalCollection, RangeReplaceableCollection {}
+
 extension String {
-    
-    subscript (range: Range<Int>) -> String? {
-        let count = characters.count
+    func nsRange(from range: Range<String.Index>) -> NSRange {
+        let from = range.lowerBound.samePosition(in: utf16)
+        let to = range.upperBound.samePosition(in: utf16)
+        return NSRange(location: utf16.distance(from: utf16.startIndex, to: from),
+                       length: utf16.distance(from: from, to: to))
+    }
+}
+
+extension String {
+    subscript(sequentialAccess range: Range<Int>) -> String? {
+        return characters[sequentialAccess: range].flatMap { String($0) }
+    }
+    subscript(sequentialAccess index: Int) -> String? {
+        return self[sequentialAccess: index..<index + 1]
+    }
+    var asciiCode: UInt32? {
+        if unicodeScalars.index(after: unicodeScalars.startIndex) != unicodeScalars.endIndex { return nil }
+        return characters.first!.asciiCode
+    }
+    public func prefix(count: Int) -> String {
+        return prefix(upTo: index(startIndex, offsetBy: count))
+    }
+}
+
+extension NSRange {
+    func toRange(with string: String) -> Range<String.Index>? {
+        let utf16 = string.utf16
+        guard
+            let from16 = utf16.index(utf16.startIndex, offsetBy: location, limitedBy: utf16.endIndex),
+            let to16 = utf16.index(from16, offsetBy: length, limitedBy: utf16.endIndex),
+            let from = String.Index(from16, within: string),
+            let to = String.Index(to16, within: string)
+            else { return nil }
+        return from ..< to
+    }
+}
+
+extension String.CharacterView {
+    subscript(sequentialAccess range: Range<Int>) -> String.CharacterView? {
+        let count = self.count
         let lower = range.lowerBound
         let upper = range.upperBound
         if lower >= count || upper > count { return nil }
-        let startIndex = characters.index(characters.startIndex, offsetBy: lower)
-        let endIndex = characters.index(startIndex, offsetBy: range.count)
-        return String(characters[startIndex..<endIndex])
+        let startIndex = index(self.startIndex, offsetBy: lower)
+        let endIndex = index(startIndex, offsetBy: range.count)
+        return self[startIndex..<endIndex]
     }
-    func asciiCode() -> UInt32? {
-        guard characters.count == 1 else { return nil }
-        return characters.first!.asciiCode()
-    }
-    func contains(_ characterSet: CharacterSet) -> Bool {
-        return rangeOfCharacter(from: characterSet) != nil
+    subscript(sequentialAccess index: Int) -> String.CharacterView? {
+        return self[sequentialAccess: index..<index + 1]
     }
 }
 
 extension Character
 {
     init?(asciiCode: UInt32) {
-        guard let scalar = UnicodeScalar(asciiCode) else {
+        guard let scalar = UnicodeScalar(asciiCode), scalar.isASCII else {
             return nil
         }
         self = Character(scalar)
     }
-    func asciiCode() -> UInt32 {
+    var asciiCode: UInt32? {
         let characterString = String(self)
         let scalars = characterString.unicodeScalars
-        
-        return scalars[scalars.startIndex].value
-    }
-}
-
-extension CharacterSet {
-    func contains(_ character: Character) -> Bool {
-        return String(character).contains(self)
+        if scalars.index(after: scalars.startIndex) != scalars.endIndex { return nil }
+        guard let first = scalars.first, first.isASCII else { return nil }
+        return first.value
     }
 }
 
