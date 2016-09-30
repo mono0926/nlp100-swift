@@ -16,7 +16,7 @@ extension String {
         let upper = range.upperBound
         if lower >= count || upper > count { return nil }
         let startIndex = characters.index(characters.startIndex, offsetBy: lower)
-        let endIndex = characters.index(characters.startIndex, offsetBy: upper)
+        let endIndex = characters.index(startIndex, offsetBy: range.count)
         return String(characters[startIndex..<endIndex])
     }
     func asciiCode() -> UInt32? {
