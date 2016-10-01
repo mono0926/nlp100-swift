@@ -14,11 +14,9 @@ class ExtensionsTests: XCTestCase {
         XCTAssertEqual("foo"[sequentialAccess: 0..<1], "f")
         XCTAssertEqual("foo"[sequentialAccess: 0..<2], "fo")
         XCTAssertEqual("foo"[sequentialAccess: 0..<3], "foo")
-        XCTAssertEqual("foo"[sequentialAccess: 0..<4], nil)
         XCTAssertEqual("foo"[sequentialAccess: 1..<1], "")
         XCTAssertEqual("foo"[sequentialAccess: 1..<2], "o")
         XCTAssertEqual("foo"[sequentialAccess: 1..<3], "oo")
-        XCTAssertEqual("foo"[sequentialAccess: 1..<4], nil)
     }
     
     func testToAsciiCode() {
@@ -39,9 +37,6 @@ class ExtensionsTests: XCTestCase {
     func testPrefix() {
         let input = "12345"
         XCTAssertEqual("1", input.prefix(upTo: input.index(input.startIndex, offsetBy: 1)))
-        XCTAssertEqual("123", input.prefix(count: 3))
-        XCTAssertEqual("12345", input.prefix(count: 5))
-//        XCTAssertEqual("12345", input.prefix(count: 6)) //クラッシュ
         XCTAssertEqual(input, input.prefix(6))
     }
 }

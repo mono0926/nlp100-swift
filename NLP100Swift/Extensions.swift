@@ -21,8 +21,8 @@ extension String {
 }
 
 extension String {
-    subscript(sequentialAccess range: Range<Int>) -> String? {
-        return characters[sequentialAccess: range].flatMap { String($0) }
+    subscript(sequentialAccess range: Range<Int>) -> String {
+        return String(characters[sequentialAccess: range])
     }
     subscript(sequentialAccess index: Int) -> String? {
         return self[sequentialAccess: index..<index + 1]
@@ -30,9 +30,6 @@ extension String {
     var asciiCode: UInt32? {
         if unicodeScalars.index(after: unicodeScalars.startIndex) != unicodeScalars.endIndex { return nil }
         return characters.first!.asciiCode
-    }
-    public func prefix(count: Int) -> String {
-        return prefix(upTo: index(startIndex, offsetBy: count))
     }
 }
 
@@ -50,11 +47,8 @@ extension NSRange {
 }
 
 extension String.CharacterView {
-    subscript(sequentialAccess range: Range<Int>) -> String.CharacterView? {
-        let count = self.count
+    subscript(sequentialAccess range: Range<Int>) -> String.CharacterView {
         let lower = range.lowerBound
-        let upper = range.upperBound
-        if lower >= count || upper > count { return nil }
         let startIndex = index(self.startIndex, offsetBy: lower)
         let endIndex = index(startIndex, offsetBy: range.count)
         return self[startIndex..<endIndex]

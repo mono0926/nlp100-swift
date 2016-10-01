@@ -44,7 +44,7 @@ struct Chapter1 {
     */
     static func q3(_ input: String) -> [Int] {
         return input.components(separatedBy: " ")
-            .map { $0.trimmingCharacters(in: CharacterSet(charactersIn: ",.")).characters.count }
+            .map { $0.trimmingCharacters(in: CharacterSet(charactersIn: ",.")).count }
     }
     /**
     # 04. 元素記号
@@ -53,7 +53,7 @@ struct Chapter1 {
     */
     static func q4(_ input: String, condition: [Int]) -> [String: Int] {
         return input.components(separatedBy: " ").enumerated()
-            .map { (i, v) in condition.contains(i + 1) ? (i, v[sequentialAccess: 0..<1]!) : (i, v[sequentialAccess: 0..<2]!) }
+            .map { (i, v) in condition.contains(i + 1) ? (i, v.prefix(1)) : (i, v.prefix(2)) }
             .reduce([String: Int]()) { sum, v in
                 var sum = sum
                 sum[v.1] = v.0 + 1
@@ -149,8 +149,7 @@ fileprivate extension Chapter1 {
     fileprivate static func ngramChar(_ input: String, n: Int) -> [String] {
         return input.characters.reduce([String]()) { sum, char in
             var sum = sum
-            let count = sum.last?.characters.count ?? 0
-            let first = sum.last?[sequentialAccess: count - (n - 1)..<count] ?? " "
+            let first = sum.last?.suffix(n - 1) ?? " "
             sum.append(first + String(char))
             return sum
             }

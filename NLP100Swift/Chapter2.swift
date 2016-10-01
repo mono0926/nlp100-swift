@@ -37,7 +37,7 @@ struct Chapter2 {
         var newLinesCount = 0
         for (i, c) in input.characters.enumerated() {
             if newLinesCount == n {
-                return input[sequentialAccess: 0..<i]!
+                return input.prefix(i)
             }
             if String(c).rangeOfCharacter(from: CharacterSet.newlines) != nil  {
                 newLinesCount += 1
@@ -48,9 +48,10 @@ struct Chapter2 {
     static func tail(_ input: String, n: Int) -> String {
         let nHead = countNumberOfLines(input) - n
         var newLinesCount = 0
+        let count = input.count
         for (i, c) in input.characters.enumerated() {
             if newLinesCount == nHead {
-                return input[sequentialAccess: i..<input.characters.count]!
+                return input.suffix(from: input.index(input.endIndex, offsetBy: -(count-i)))
             }
             if String(c).rangeOfCharacter(from: CharacterSet.newlines) != nil {
                 newLinesCount += 1
