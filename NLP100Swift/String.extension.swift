@@ -23,13 +23,21 @@ extension String {
         return String(characters[sequentialAccess: range])
     }
     
-    public subscript(sequentialAccess index: Int) -> String? {
+    public subscript(sequentialAccess index: Int) -> String {
         return self[sequentialAccess: index..<index + 1]
     }
     
     public var asciiCode: UInt32? {
         if unicodeScalars.index(after: unicodeScalars.startIndex) != unicodeScalars.endIndex { return nil }
         return characters.first!.asciiCode
+    }
+    
+    public mutating func removeFirst(_ n: Int) {
+        characters.removeFirst(n)
+    }
+    
+    public mutating func removeLast(_ n: Int) {
+        characters.removeLast(n)
     }
 }
 

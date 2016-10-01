@@ -39,4 +39,11 @@ class ExtensionsTests: XCTestCase {
         XCTAssertEqual("1", input.prefix(upTo: input.index(input.startIndex, offsetBy: 1)))
         XCTAssertEqual(input, input.prefix(6))
     }
+    func testRemoveBound() {
+        var s = "abcde"
+        s.removeFirst(2)
+        XCTAssertEqual(s, "cde")
+        s.removeLast(2)
+        XCTAssertEqual(s, "c")
+    }
 }
