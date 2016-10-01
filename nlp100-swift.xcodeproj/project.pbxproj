@@ -23,11 +23,13 @@
 		FEB07E731D7B021100040B90 /* hightemp_c1+2.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E721D7B021100040B90 /* hightemp_c1+2.txt */; };
 		FEB07E751D7B076800040B90 /* hightemp_headn3.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E741D7B076800040B90 /* hightemp_headn3.txt */; };
 		FEB07E771D7B0BC800040B90 /* hightemp_tailn3.txt in Resources */ = {isa = PBXBuildFile; fileRef = FEB07E761D7B0BC800040B90 /* hightemp_tailn3.txt */; };
+		FEBC028A1D9F44DE005B52E6 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC02891D9F44DE005B52E6 /* String.extension.swift */; };
+		FEBC028C1D9F450D005B52E6 /* Collection.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC028B1D9F450D005B52E6 /* Collection.extension.swift */; };
+		FEBC028E1D9F4523005B52E6 /* Range.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC028D1D9F4523005B52E6 /* Range.extension.swift */; };
 		FED26D7B1D76F37900FF0DEA /* NLP100Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FED26D721D76F37800FF0DEA /* NLP100Swift.framework */; };
 		FED26D801D76F37900FF0DEA /* Chapter1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D7F1D76F37900FF0DEA /* Chapter1Tests.swift */; };
 		FED26D821D76F37900FF0DEA /* NLP100Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = FED26D741D76F37900FF0DEA /* NLP100Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FED26D8A1D76F38D00FF0DEA /* Chapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D891D76F38D00FF0DEA /* Chapter1.swift */; };
-		FED26D8C1D76FAD700FF0DEA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D8B1D76FAD700FF0DEA /* Extensions.swift */; };
 		FED26D8E1D76FE1800FF0DEA /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D8D1D76FE1800FF0DEA /* ExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,10 @@
 		FEB07E721D7B021100040B90 /* hightemp_c1+2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "hightemp_c1+2.txt"; sourceTree = "<group>"; };
 		FEB07E741D7B076800040B90 /* hightemp_headn3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_headn3.txt; sourceTree = "<group>"; };
 		FEB07E761D7B0BC800040B90 /* hightemp_tailn3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hightemp_tailn3.txt; sourceTree = "<group>"; };
+		FEBC02871D9F4411005B52E6 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		FEBC02891D9F44DE005B52E6 /* String.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
+		FEBC028B1D9F450D005B52E6 /* Collection.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.extension.swift; sourceTree = "<group>"; };
+		FEBC028D1D9F4523005B52E6 /* Range.extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Range.extension.swift; sourceTree = "<group>"; };
 		FED26D721D76F37800FF0DEA /* NLP100Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NLP100Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED26D741D76F37900FF0DEA /* NLP100Swift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLP100Swift.h; sourceTree = "<group>"; };
 		FED26D751D76F37900FF0DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,7 +71,6 @@
 		FED26D7F1D76F37900FF0DEA /* Chapter1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter1Tests.swift; sourceTree = "<group>"; };
 		FED26D811D76F37900FF0DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED26D891D76F38D00FF0DEA /* Chapter1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; };
-		FED26D8B1D76FAD700FF0DEA /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FED26D8D1D76FE1800FF0DEA /* ExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,9 +113,20 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		FEBC02881D9F44CF005B52E6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FEBC02891D9F44DE005B52E6 /* String.extension.swift */,
+				FEBC028B1D9F450D005B52E6 /* Collection.extension.swift */,
+				FEBC028D1D9F4523005B52E6 /* Range.extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		FED26D471D76F2BB00FF0DEA = {
 			isa = PBXGroup;
 			children = (
+				FEBC02871D9F4411005B52E6 /* MyPlayground.playground */,
 				FED26D731D76F37900FF0DEA /* NLP100Swift */,
 				FED26D7E1D76F37900FF0DEA /* NLP100SwiftTests */,
 				FED26D541D76F2CE00FF0DEA /* Products */,
@@ -129,10 +145,10 @@
 		FED26D731D76F37900FF0DEA /* NLP100Swift */ = {
 			isa = PBXGroup;
 			children = (
+				FEBC02881D9F44CF005B52E6 /* Extensions */,
 				FED26D741D76F37900FF0DEA /* NLP100Swift.h */,
 				FED26D751D76F37900FF0DEA /* Info.plist */,
 				FED26D891D76F38D00FF0DEA /* Chapter1.swift */,
-				FED26D8B1D76FAD700FF0DEA /* Extensions.swift */,
 				FE8D5F2D1D78138A006DF186 /* Chapter2.swift */,
 			);
 			path = NLP100Swift;
@@ -274,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FED26D8C1D76FAD700FF0DEA /* Extensions.swift in Sources */,
 				FED26D8A1D76F38D00FF0DEA /* Chapter1.swift in Sources */,
 				FE8D5F2E1D78138A006DF186 /* Chapter2.swift in Sources */,
+				FEBC028A1D9F44DE005B52E6 /* String.extension.swift in Sources */,
+				FEBC028E1D9F4523005B52E6 /* Range.extension.swift in Sources */,
+				FEBC028C1D9F450D005B52E6 /* Collection.extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
