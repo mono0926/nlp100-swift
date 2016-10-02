@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyStringExtension
 
 struct Chapter2 {
     /** Linuxのwcコマンドでカウントした行数と同じ結果を返す */
