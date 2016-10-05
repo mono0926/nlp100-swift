@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyStringExtension
 
 class TestUtil {
     private static let bundle = Bundle(for: TestUtil.self)

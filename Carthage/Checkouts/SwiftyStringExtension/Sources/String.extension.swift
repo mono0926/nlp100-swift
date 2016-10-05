@@ -54,4 +54,24 @@ extension String {
             else { return nil }
         return from ..< to
     }
+    
+    // MARK: - Convenient
+    public mutating func replace(of target: String, with replacement: String)  {
+        self = replacingOccurrences(of: target, with: replacement)
+    }
+    public func addingUrlEncoding() -> String {
+        return addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    }
+    public func getValueOrNil() -> String? {
+        if String.isEmpty(self) {
+            return nil
+        }
+        return self
+    }
+    public static func isEmpty(_ s: String?) -> Bool {
+        if let s = s {
+            return s.isEmpty
+        }
+        return true
+    }
 }

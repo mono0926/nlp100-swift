@@ -56,4 +56,31 @@ class StringTests: XCTestCase {
         XCTAssertEqual(s2.makeRange(from: NSRange(location: 0, length: 6)), s2.startIndex..<s2.index(s2.startIndex, offsetBy: 2))
         XCTAssertNil(s2.makeRange(from: NSRange(location: 0, length: 50)))
     }
+    
+    func testReplace() {
+        var s = "abcd"
+        s.replace(of: "cd", with: "ef")
+        XCTAssertEqual(s, "abef")
+        XCTAssertEqual(s, s.replacingOccurrences(of: "cd", with: "ef"))
+    }
+    
+    func testAddingUrlEncoding() {
+        let input1 = "abc"
+        XCTAssertEqual(input1.addingUrlEncoding(), input1)
+        let input2 = "http://hogehoge.com/?param=!*'();:@&=+$,/?%#[]"
+        XCTAssertEqual(input2.addingUrlEncoding(), "http://hogehoge.com/?param=!*'();:@&=+$,/?%25%23%5B%5D")
+    }
+    
+    func testGetValueOrNil() {
+        XCTAssertEqual("a".getValueOrNil(), "a")
+        XCTAssertNil("".getValueOrNil())
+        let s: String? = nil
+        XCTAssertNil(s?.getValueOrNil())
+    }
+    
+    func testIsEmpty() {
+        XCTAssertTrue(String.isEmpty(""))
+        XCTAssertTrue(String.isEmpty(nil))
+        XCTAssertFalse(String.isEmpty("a"))
+    }
 }

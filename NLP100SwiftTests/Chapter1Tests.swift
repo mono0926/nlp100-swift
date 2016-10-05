@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import NLP100Swift
+import SwiftyStringExtension
 
 class Chapter1Tests: XCTestCase {
     func testQ0() {

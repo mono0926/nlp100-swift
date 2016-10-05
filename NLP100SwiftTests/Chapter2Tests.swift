@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import NLP100Swift
+import SwiftyStringExtension
 
 class Chapter2Tests: XCTestCase {
     private let filename = "hightemp"

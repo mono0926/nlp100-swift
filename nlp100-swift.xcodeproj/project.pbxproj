@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE26C8451DA4A393009EBFD9 /* SwiftyStringExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE26C8441DA4A393009EBFD9 /* SwiftyStringExtension.framework */; };
+		FE484F271DA4A57700E9A9A9 /* SwiftyStringExtension.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE26C8441DA4A393009EBFD9 /* SwiftyStringExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE8D5F2E1D78138A006DF186 /* Chapter2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8D5F2D1D78138A006DF186 /* Chapter2.swift */; };
 		FE8D5F301D78139B006DF186 /* Chapter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */; };
 		FE96F88F1D7BB20900834C97 /* xaa in Resources */ = {isa = PBXBuildFile; fileRef = FE96F88C1D7BB20900834C97 /* xaa */; };
@@ -29,7 +31,6 @@
 		FED26D821D76F37900FF0DEA /* NLP100Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = FED26D741D76F37900FF0DEA /* NLP100Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FED26D8A1D76F38D00FF0DEA /* Chapter1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D891D76F38D00FF0DEA /* Chapter1.swift */; };
 		FED26D8E1D76FE1800FF0DEA /* CollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED26D8D1D76FE1800FF0DEA /* CollectionTests.swift */; };
-		FEFB04681DA12D730008DBCE /* SwiftyStringExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFB04621DA12CBE0008DBCE /* SwiftyStringExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,37 +41,23 @@
 			remoteGlobalIDString = FED26D711D76F37800FF0DEA;
 			remoteInfo = NLP100Swift;
 		};
-		FEFB045D1DA12CBE0008DBCE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FEFB04561DA12CBE0008DBCE /* SwiftyStringExtension.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FE3261771DA0F357002C5A7F;
-			remoteInfo = "SwiftyStringExtension-iOS";
-		};
-		FEFB045F1DA12CBE0008DBCE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FEFB04561DA12CBE0008DBCE /* SwiftyStringExtension.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FE3261801DA0F358002C5A7F;
-			remoteInfo = "SwiftyStringExtensionTests-iOS";
-		};
-		FEFB04611DA12CBE0008DBCE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FEFB04561DA12CBE0008DBCE /* SwiftyStringExtension.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FE7F509B1DA1240A00FCD392;
-			remoteInfo = "SwiftyStringExtension-macOS";
-		};
-		FEFB04631DA12CBE0008DBCE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FEFB04561DA12CBE0008DBCE /* SwiftyStringExtension.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FE7F50A31DA1240A00FCD392;
-			remoteInfo = "SwiftyStringExtensionTests-macOS";
-		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FE484F261DA4A56500E9A9A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE484F271DA4A57700E9A9A9 /* SwiftyStringExtension.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FE26C8441DA4A393009EBFD9 /* SwiftyStringExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyStringExtension.framework; path = Carthage/Build/Mac/SwiftyStringExtension.framework; sourceTree = "<group>"; };
 		FE8D5F2D1D78138A006DF186 /* Chapter2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter2.swift; sourceTree = "<group>"; };
 		FE8D5F2F1D78139B006DF186 /* Chapter2Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter2Tests.swift; sourceTree = "<group>"; };
 		FE96F88C1D7BB20900834C97 /* xaa */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xaa; sourceTree = "<group>"; };
@@ -97,7 +84,6 @@
 		FED26D811D76F37900FF0DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED26D891D76F38D00FF0DEA /* Chapter1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter1.swift; sourceTree = "<group>"; };
 		FED26D8D1D76FE1800FF0DEA /* CollectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTests.swift; sourceTree = "<group>"; };
-		FEFB04561DA12CBE0008DBCE /* SwiftyStringExtension.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyStringExtension.xcodeproj; path = Carthage/Checkouts/SwiftyStringExtension/SwiftyStringExtension.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEFB04681DA12D730008DBCE /* SwiftyStringExtension.framework in Frameworks */,
+				FE26C8451DA4A393009EBFD9 /* SwiftyStringExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE26C8431DA4A393009EBFD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE26C8441DA4A393009EBFD9 /* SwiftyStringExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE43B9AE1DA130B100C0A3AF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,11 +153,11 @@
 		FED26D471D76F2BB00FF0DEA = {
 			isa = PBXGroup;
 			children = (
-				FEFB04561DA12CBE0008DBCE /* SwiftyStringExtension.xcodeproj */,
 				FEBC02871D9F4411005B52E6 /* MyPlayground.playground */,
 				FED26D731D76F37900FF0DEA /* NLP100Swift */,
 				FED26D7E1D76F37900FF0DEA /* NLP100SwiftTests */,
 				FED26D541D76F2CE00FF0DEA /* Products */,
+				FE26C8431DA4A393009EBFD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,17 +193,6 @@
 				FEB07E6A1D7AA3C400040B90 /* TestUtil.swift */,
 			);
 			path = NLP100SwiftTests;
-			sourceTree = "<group>";
-		};
-		FEFB04571DA12CBE0008DBCE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FEFB045E1DA12CBE0008DBCE /* SwiftyStringExtension.framework */,
-				FEFB04601DA12CBE0008DBCE /* SwiftyStringExtensionTests.xctest */,
-				FEFB04621DA12CBE0008DBCE /* SwiftyStringExtension.framework */,
-				FEFB04641DA12CBE0008DBCE /* SwiftyStringExtensionTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +234,7 @@
 				FED26D761D76F37900FF0DEA /* Sources */,
 				FED26D771D76F37900FF0DEA /* Frameworks */,
 				FED26D781D76F37900FF0DEA /* Resources */,
+				FE484F261DA4A56500E9A9A9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -292,12 +276,6 @@
 			mainGroup = FED26D471D76F2BB00FF0DEA;
 			productRefGroup = FED26D541D76F2CE00FF0DEA /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = FEFB04571DA12CBE0008DBCE /* Products */;
-					ProjectRef = FEFB04561DA12CBE0008DBCE /* SwiftyStringExtension.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				FED26D711D76F37800FF0DEA /* NLP100Swift */,
@@ -305,37 +283,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		FEFB045E1DA12CBE0008DBCE /* SwiftyStringExtension.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftyStringExtension.framework;
-			remoteRef = FEFB045D1DA12CBE0008DBCE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FEFB04601DA12CBE0008DBCE /* SwiftyStringExtensionTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftyStringExtensionTests.xctest;
-			remoteRef = FEFB045F1DA12CBE0008DBCE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FEFB04621DA12CBE0008DBCE /* SwiftyStringExtension.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftyStringExtension.framework;
-			remoteRef = FEFB04611DA12CBE0008DBCE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FEFB04641DA12CBE0008DBCE /* SwiftyStringExtensionTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SwiftyStringExtensionTests.xctest;
-			remoteRef = FEFB04631DA12CBE0008DBCE /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FED26D701D76F37800FF0DEA /* Resources */ = {
@@ -444,6 +391,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -509,6 +460,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -562,6 +517,10 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -618,6 +577,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
